@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: url('./components/assets/background.svg') center center fixed ;
+  background: url('./assets/background.svg') center center fixed;
   background-size: cover;
 }
 
@@ -21,7 +21,7 @@ h1 {
 }
 
 input,
-[type="checkbox"] + label,
+[type="checkbox"]+label,
 p.no-task-msg {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -34,7 +34,8 @@ button {
   font-weight: 400;
   font-size: 0.8rem;
 }
-[type="checkbox"]:not(:checked) + label{
+
+[type="checkbox"]:not(:checked)+label {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
 }

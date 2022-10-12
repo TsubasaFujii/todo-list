@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './TaskList.module.css';
 
 // Components
-import Task from './Task';
+import Task from '../Task';
 
 // This component get rendered only when "tasks > 0"
 export default function TaskList(props) {

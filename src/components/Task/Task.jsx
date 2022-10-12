@@ -1,6 +1,6 @@
 import React from "react";
-import styles from ".Task.module.css";
-import removeButton from "./assets/rubbish-bin-icon.svg";
+import styles from "./Task.module.css";
+import removeButton from "../../assets/rubbish-bin-icon.svg";
 
 export default function Task(props) {
     const { taskName, toggleCompletion, id, handleRemoveTask } = props;
@@ -12,7 +12,7 @@ export default function Task(props) {
     function handleClickRemove() {
         handleRemoveTask(id);
     }
-    
+
     return (
         <li className={styles['task--list-item']}>
             <input

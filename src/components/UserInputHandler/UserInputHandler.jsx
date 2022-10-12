@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import addButton from './assets/addButton.svg';
+import addButton from '../../assets/addButton.svg';
 import styles from './UserInputHandler.module.css';
 
 // Components
@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 import Tooltip from '../ToolTip/Tooltip';
 
 export default function UserInputHandler(props) {
-    const {handleAddTask, removeCompletedTasks, hasCompletedTasks} = props;
+    const { handleAddTask, removeCompletedTasks, hasCompletedTasks } = props;
 
     const [inputValue, setInputValue] = useState('');
     const [hasValidInput, setHasValidInput] = useState(false);
@@ -17,7 +17,7 @@ export default function UserInputHandler(props) {
         const containsOnlySpace = inputValue.trim().length === 0;
 
         // when loaded OR user deleted the entire input by themselves
-        if(inputValue.length === 0){
+        if (inputValue.length === 0) {
             setShownTooltips(false);
             setHasValidInput(false);
         } else if (containsOnlySpace) {
@@ -29,7 +29,7 @@ export default function UserInputHandler(props) {
         }
     }, [inputValue]);
 
-    function handleUserInput(event){
+    function handleUserInput(event) {
         setInputValue(event.target.value);
     }
 
@@ -43,7 +43,7 @@ export default function UserInputHandler(props) {
     }
 
     function handleKeypress(event) {
-        if(hasValidInput && event.key === 'Enter'){
+        if (hasValidInput && event.key === 'Enter') {
             addTask();
         }
     }
